@@ -1,0 +1,7 @@
+Sugestões para novas opções
+
+1.Chaves nas bordas da maquete com opções de navegação: direta, desafio,...
+
+2. Navegação por Desafio: possibilita ao aluno responder a algumas questões previamente elaboradas. O Computador, ciente das coordenadas do ponto alvo, se encarrega de dar as pistas conforme o aluno tecla os diferentes botões da maquete.
+
+Ex. Onde está a escola especial? Conforme o aluno percorre os botões tem-se pistas: siga 'a nordeste, siga para o norte, volte para o sul...

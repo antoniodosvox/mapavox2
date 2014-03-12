@@ -1,0 +1,179 @@
+Mapavox - versão 1.3 - manual de operação
+
+1. Descrição geral
+------------------
+
+O programa Mapavox é um utilitário destinado a exibir sons
+e vozes sintetizadas em maquetes.  
+
+As maquetes são preparadas adicionando-se a ela botões de apertar
+que são conectados à interface de impressora do computador através
+de uma malha de fios.  Quando um botão é acionado são exibidos
+sons e vozes sintetizadas como descritas num arquivo de configuração.
+
+A versão atual do programa permite um máximo de 32 botões.
+
+A síntese de voz é realizada com um sintetizador SAPI 4.
+
+
+2. Instalação
+-------------
+
+a) automática
+
+Execute o programa setupmapavox.exe
+
+b) manual (mapavox.zip)
+
+Na falta do setup automático, proceda da seguinte forma.
+
+Descompacte o arquivo mapavox.zip na pasta c:\mapavox
+Execute o programa spchapi.exe para inicializar o sistema SAPI.
+Execute o programa lhttsptb.exe para instalar a fala SAPI para
+português.
+Crie um ícone para mapavox.exe
+
+
+3. Operação básica
+------------------
+
+O programa quando acionado exibe uma tela em que se apresentam
+5 opções:
+
+Exibir mapa
+Editar mapa
+Testar sensores
+Autores
+Inibe sensores (liga/desliga)
+
+
+3.1 - Exibir mapa
+
+Ao iniciar esta opção, é perguntado o nome do mapa desejado.
+O mapa é um arquivo com a extensão .mvx que contém a descrição
+da imagem a ser mostrada na tela, dos sensores e dos pontos de
+acionamento.
+
+A maquete então será acionada eletricamente e quando um sensor
+da maquete for acionado, os sons correspondentes serão acionados.
+
+A imagem (provavelmente da área física à qual a maquete se refere)
+é exibida na tela e os pontos em que os sensores estão colocados
+aparecem como pequenos botões.
+
+Passando-se o mouse sobre um destes botões, é mostrado o nome deste
+lugar.  Apertando-se o botão na tela, as mesmas falas e sons que 
+seriam exibidos com o sensor são executados.
+
+Para encerrar esta função basta fechar a janela normalmente ou
+apertar ALT-F4.
+
+
+3.2 - Editar mapa
+
+Ao iniciar esta opção, é perguntado o nome do mapa desejado.
+Se for um mapa novo informe um nome para o arquivo (.mvx) a criar.
+
+- Fase 1: escolha das características gerais
+
+Será pedido o nome do mapa, o nome do arquivo de imagem, o número da
+voz sapi, a velocidade e a tonalidade sapi.
+Introduza os valores desejados.
+
+Para selecionar uma imagem (arquivo .bmp ou .jpg) pressione
+o botão procurar.
+
+É interessante fazer um teste da voz sapi, escolhendo-se
+a voz, velocidade e tonalidade mais adequada.
+
+- Fase 2: introdução, edição ou remoção de registros de sensores.
+
+O mapa é exibido e botões são mostrados onde os pontos dos sensores
+foram anteriormente registrados.
+
+a) inclusão de novos pontos
+
+Basta clicar numa área em que não existam sensores que será
+aberta uma janela em que se pode indicar o nome deste ponto,
+o número do sensor físico, e os sons (arquivos .WAV e .AVI) e vozes
+associados.
+
+b) edição de pontos
+
+Clicando num botão referente a um ponto existente, é aberta uma
+tela com as seguintes opções:
+
+Nome:  informe o nome desejado para o ponto
+Número do sensor:  informe o número do sensor.  Se não souber qual
+o sensor, use a opção de teste de sensores.
+Novo arquivo de som:  use esta opção para indicar um arquivo de
+som desejado para o ponto.  O novo som é mostrado num "listbox" à
+direita.
+Nova voz:   use esta opção para adicionar um texto a ser sintetizado
+Remove voz ou som:  clique no listbox para indicar o som a remover
+e depois acione esta opção.  Arquivos .WAV ou .AVI são aceitos.
+Flechas (cima e baixo):  permitem trocar a ordem de execução dos sons.
+O "listbox" reflete a ordem de exibição.
+Edita: modifica as características ou o nome do arquivo a exibir.  Antes de acionar esta opção, selecione no "listbox" o item desejado.
+Executa:  reproduz os sons especificados.
+
+Ok:  registra a operação
+Cancela:  sai sem registrar
+Remove o sensor:  remove a referência ao sensor especificado nesta janela.
+
+
+3.3 - Testar sensores
+
+Esta opção permite saber o número dos sensores físicos, e também
+testar se a eletrônica da maquete está íntegra.  Apertando-se um
+sensor físico uma marca aparece na tela.
+
+
+3.4 - Autores
+
+Esta opção permite conhecer os responsáveis por este desenvolvimento.
+
+
+3.5 - Inibe sensores
+
+Esta opção serve para configurar ou demonstrar o programa sem a
+necessidade de ter a maquete fisicamente conectada.  Com isso
+os sensores são ignorados mas é possível acionar suas funcionalidades
+através de cliques nos botões do mapa visível na tela.
+
+
+4. Um exemplo de arquivo .mvx
+-----------------------------
+
+Embora não seja necessário em geral, por vezes torna-se prático
+editar um arquivo .mvx manualmente.  O exemplo abaixo mostra
+a estrutura deste arquivo.
+
+
+
+; Meu primeiro mapa
+; Autor: Antonio Borges
+; Em 12/12/2003
+
+[MAPAVOX]
+NOME=Mapa do Lago de Rio Claro
+IMAGEM=C:\mapavox\mapaLago.jpg
+VOZ=2
+VELOCIDADE=220
+TOM=110
+
+[1]
+NOME=Estacionamento e lado direito da ciclo via.
+X=100
+Y=180
+1=SOM c:\windows\media\tada.wav
+2=VOZ Estacionamento. 
+3=VOZ Em frente dele estão os quiosques e no lado direito a ciclo via.
+
+[2]
+NOME=zoologico
+X=220
+Y=100
+1=SOM c:\windows\media\themic~1.wav
+2=VOZ Antigo zoológico municipal que foi interditado pelo IBAMA.
+3=VOZ No canto esquerdo dessa área existe um banheiro público em péssimas condições de uso.

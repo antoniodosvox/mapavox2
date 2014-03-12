@@ -1,0 +1,45 @@
+; Meu primeiro mapa
+; Autor: Antonio Borges
+; Em 12/12/2003
+
+[MAPAVOX]
+NOME=Mapa do Lago de Rio Claro
+IMAGEM=C:\mapavox\mapaLago.jpg
+VOZ=2
+VELOCIDADE=220
+TOM=110
+
+[1]
+NOME=Lago da Cidade
+X=314
+Y=291
+IMAGEM=mapaCapa.jpg
+1=SOM C:\windows\media\tada.wav
+2=VOZ Este é o lago da Cidade
+
+[2]
+NOME=Estacionamento
+X=124
+Y=365
+1=VOZ Estacionamento
+2=SOM C:\WINDOWS\MEDIA\CHIMES.WAV
+3=VOZ Em frente a este estacionamento estão os quiosques e ao lado direito a ciclovia
+
+[3]
+NOME=Esta é a mesa de testes
+X=499
+Y=404
+1=SOM C:\windows\media\chord.wav
+2=VOZ Mesa de testes, fora da maquete!
+3=VOZ Assista agora a um filminho
+4=SOM C:\WINDOWS\CLOCK.AVI
+
+[5]
+NOME=Esta é a Cidadela
+X=363
+Y=420
+IMAGEM=
+1=VOZ Esta é a Cidadela
+2=ESPERA
+3=SOM C:\WINDOWS\MEDIA\CHIMES.WAV
+
